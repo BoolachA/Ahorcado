@@ -9,7 +9,18 @@ ultimaLinea = ""
 intento = ""
 vidas = 4
 
-palabra = input("Escriba una palabra: ").upper()
+print("1 - Poner un diccionário\n2 - Usar diccionário default\n3 - Escribir palabra\n")
+opcion = int(input("Opc: "))
+os.system("cls")
+match opcion:
+    case 1:
+        palabra = diccionario.pasarList().upper()
+    case 2:
+        palabra = diccionario.pickRandomWord().upper()
+    case 3:
+        palabra = input("Escriba una palabra: ").upper()
+
+
 numeroLetras = len(palabra)
 ultimaLinea = "|     " + "_ " * numeroLetras
 

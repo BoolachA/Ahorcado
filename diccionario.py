@@ -5,9 +5,11 @@ palabrasLista = ['Oposición', 'Naufragio', 'Tormentoso', 'Flotar', 'Terrible', 
 palabraCurrent = ""
 
 def pickRandomWord():
-    random.randint(0,len(palabrasLista))
+    return palabrasLista[random.randint(0,len(palabrasLista)-1)]
 
 def pasarList():
+    palabrasLista.clear()
+    palabras = input("Diccionario: ")
     for x in palabras:
         if(x == ","):
             palabrasLista.append(palabraCurrent)
@@ -16,3 +18,4 @@ def pasarList():
             pass
         else:
             palabraCurrent += x
+        return palabrasLista[random.randint(0,len(palabrasLista)-1)]
