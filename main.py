@@ -20,6 +20,8 @@ match opcion:
     case 3:
         palabra = input("Escriba una palabra: ").upper()
 
+palabra = palabra.replace("Ó", "O").replace("Á", "A").replace("É","E").replace("Í","I").replace("Ú","U")
+
 
 numeroLetras = len(palabra)
 ultimaLinea = "|     " + "_ " * numeroLetras
